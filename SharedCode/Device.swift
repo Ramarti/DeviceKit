@@ -226,6 +226,8 @@ public enum Device {
         case TV
         /// Used when an object has a trait collection, but it is not in an environment yet. For example, a view that is created, but not put into a view hierarchy.
         case Unspecified
+        /// The user interface should be designed for CarPlay
+        case CarPlay
         
         private init() {
             switch UIDevice.currentDevice().userInterfaceIdiom {
@@ -233,6 +235,7 @@ public enum Device {
             case .Phone:        self = .Phone
             case .TV:           self = .TV
             case .Unspecified:  self = .Unspecified
+            case .CarPlay:      self = .CarPlay
             }
         }
         
